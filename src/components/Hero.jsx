@@ -2,10 +2,11 @@ import { useNavigate } from 'react-router-dom'
 import { useCountUp } from '../hooks/useCountUp'
 
 function StatItem({ value, label }) {
-  const { ref, count } = useCountUp(value)
+  const isNumeric = /\d/.test(value)
+  const { ref, count } = useCountUp(isNumeric ? value : '0')
   return (
     <div className="hero-stat" ref={ref}>
-      <h3>{count || '0'}</h3>
+      <h3>{isNumeric ? (count || '0') : value}</h3>
       <p>{label}</p>
     </div>
   )
