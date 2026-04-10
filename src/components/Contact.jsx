@@ -129,8 +129,8 @@ export default function Contact() {
             <div>
               <h3>Let's Talk About Your Project</h3>
               <p>
-                Whether you're ready to start or just exploring your options, we're happy to answer questions
-                and provide a free, no-obligation estimate.
+                We're a faith-based, family-owned team that genuinely cares about the people we work for.
+                Reach out — we'd love to hear about your project and provide a free, no-obligation estimate.
               </p>
             </div>
 

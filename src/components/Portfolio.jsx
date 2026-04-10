@@ -36,9 +36,9 @@ export default function Portfolio() {
         <div className="portfolio-grid">
           {images.map((img, i) => (
             <div className="portfolio-card" key={i}>
-              <img src={img.src} alt={`Quality Renovations project ${i + 1}`} loading="lazy" />
+              <img src={img.src} alt={`Quality Renovators project ${i + 1}`} loading="lazy" />
               <div className="portfolio-overlay">
-                <div className="portfolio-tag">Quality Renovations</div>
+                <div className="portfolio-tag">Quality Renovators</div>
                 <h3>Completed Project</h3>
               </div>
             </div>

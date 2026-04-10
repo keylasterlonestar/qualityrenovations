@@ -1,11 +1,11 @@
 export default function About() {
   const features = [
+    'Faith-based values guiding every decision we make',
+    'Family-owned and operated — we treat you like family',
     'Licensed & fully insured for your peace of mind',
     'Free, no-obligation estimates on every project',
-    'On-time completion — we respect your schedule',
     'Transparent pricing with no hidden fees',
-    'Premium materials from trusted suppliers',
-    'Lifetime workmanship guarantee on labor',
+    'On-time completion — we respect your schedule',
   ]
 
   return (
@@ -15,7 +15,7 @@ export default function About() {
           <div className="about-image-wrap">
             <img
               src="/images/IMG_5620.jpg"
-              alt="Quality Renovations team at work"
+              alt="Quality Renovators team at work"
             />
             <div className="about-badge">
               <h4>20+</h4>
@@ -25,12 +25,12 @@ export default function About() {
 
           <div className="about-content">
             <span className="section-label">About Us</span>
-            <h2>Your Trusted Local Renovation Experts</h2>
+            <h2>Faith-Based. Family-Owned. Built on Trust.</h2>
             <p>
-              Quality Renovations is a family-owned general contracting company based in
-              Natalia, Texas. For over 20 years, we've helped homeowners across the region
-              transform their spaces with expert craftsmanship and honest, straightforward
-              service. Every project — big or small — gets our full attention and care.
+              Quality Renovators is a faith-based, family-owned general contracting company
+              rooted in Natalia, Texas. Our faith guides how we treat every customer, every
+              worker, and every home. For over 20 years, we've built more than structures —
+              we've built lasting relationships grounded in integrity and genuine care.
             </p>
 
             <ul className="about-features">
@@ -45,6 +45,10 @@ export default function About() {
                 </li>
               ))}
             </ul>
+
+            <div className="faith-banner">
+              <span className="faith-quote">"Whatever you do, work at it with all your heart." — Colossians 3:23</span>
+            </div>
 
             <button
               className="btn btn-primary"

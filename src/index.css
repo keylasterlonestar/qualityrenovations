@@ -553,6 +553,21 @@ a {
   color: var(--accent);
 }
 
+.faith-banner {
+  background: rgba(249,115,22,0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.875rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.faith-quote {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
 @media (max-width: 900px) {
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
   .about-badge { right: 0; bottom: -1rem; }

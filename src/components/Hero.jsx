@@ -18,17 +18,18 @@ export default function Hero() {
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
             </svg>
-            Licensed &amp; Insured General Contractors
+            Faith-Based · Family-Owned · Licensed &amp; Insured
           </div>
 
           <h1>
-            Building Your Vision,<br />
-            <span>One Project</span> at a Time
+            Building With Integrity,<br />
+            <span>Serving With Heart</span>
           </h1>
 
           <p>
-            From kitchen remodels to full home additions, Quality Renovations delivers
-            expert craftsmanship, on-time completion, and results that last a lifetime.
+            Quality Renovators is a faith-based, family-owned contracting company.
+            We treat every home like our own — with honesty, craftsmanship, and care
+            rooted in our values.
           </p>
 
           <div className="hero-buttons">

@@ -9,13 +9,13 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-logo">
               <div className="logo-icon">
-                <img src="/logo.png" alt="Quality Renovations Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '6px' }} />
+                <img src="/logo.png" alt="Quality Renovators Logo" style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '6px' }} />
               </div>
-              <span>Quality Renovations</span>
+              <span>Quality Renovators</span>
             </div>
             <p>
-              Licensed & insured general contractors serving Natalia, TX and the surrounding area.
-              Building quality homes and lasting relationships since 2004.
+              Faith-based, family-owned general contractors serving Natalia, TX and the surrounding area.
+              We build with integrity, serve with heart, and treat every home like our own.
             </p>
           </div>
 
@@ -43,8 +43,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {year} Quality Renovations. All rights reserved.</span>
-          <span>Licensed &amp; Insured General Contractor · Natalia, TX</span>
+          <span>© {year} Quality Renovators. All rights reserved.</span>
+          <span>Faith-Based · Family-Owned · Licensed &amp; Insured · Natalia, TX</span>
         </div>
       </div>
     </footer>

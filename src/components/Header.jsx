@@ -29,7 +29,7 @@ export default function Header() {
               </svg>
             </div>
             <div className="logo-text">
-              Quality Renovations
+              Quality Renovators
               <span>Licensed &amp; Insured</span>
             </div>
           </div>
