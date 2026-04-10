@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const images = [
+  '/logo.png',
   '/images/7324.jpg',
   '/images/IMG_560155.jpg',
   '/images/IMG_560266.jpg',
