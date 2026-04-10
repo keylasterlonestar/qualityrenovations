@@ -44,7 +44,10 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {year} Quality Renovators. All rights reserved.</span>
-          <span>Faith-Based · Family-Owned · Licensed &amp; Insured · Natalia, TX</span>
+          <a href="https://www.bbb.org/us/tx/natalia/profile/remodel-contractors/quality-renovators-0825-1000132953" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'rgba(255,255,255,0.55)', fontSize: '0.85rem' }}>
+            <span className="footer-bbb-badge">BBB A+</span>
+            Accredited Business Since 2016
+          </a>
         </div>
       </div>
     </footer>

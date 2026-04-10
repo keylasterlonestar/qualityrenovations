@@ -4,12 +4,12 @@ export default function About() {
   const imgRef = useScrollAnimation()
   const contentRef = useScrollAnimation()
   const features = [
+    'BBB Accredited with an A+ rating since 2016',
     'Faith-based values guiding every decision we make',
     'Family-owned and operated — we treat you like family',
     'Licensed & fully insured for your peace of mind',
     'Free, no-obligation estimates on every project',
     'Transparent pricing with no hidden fees',
-    'On-time completion — we respect your schedule',
   ]
 
   return (
@@ -22,7 +22,7 @@ export default function About() {
               alt="Quality Renovators team at work"
             />
             <div className="about-badge">
-              <h4>20+</h4>
+              <h4>29</h4>
               <p>Years of<br/>Excellence</p>
             </div>
           </div>
@@ -32,9 +32,10 @@ export default function About() {
             <h2>Faith-Based. Family-Owned. Built on Trust.</h2>
             <p>
               Quality Renovators is a faith-based, family-owned general contracting company
-              rooted in Natalia, Texas. Our faith guides how we treat every customer, every
-              worker, and every home. For over 20 years, we've built more than structures —
-              we've built lasting relationships grounded in integrity and genuine care.
+              rooted in Natalia, Texas. Since 1997, Greg and Elizabeth Cargile have built
+              more than structures — they've built lasting relationships grounded in faith,
+              integrity, and genuine care. Our BBB A+ rating and accreditation since 2016
+              reflect the trust our customers place in us every day.
             </p>
 
             <ul className="about-features">

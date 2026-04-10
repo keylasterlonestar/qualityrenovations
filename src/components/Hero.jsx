@@ -17,9 +17,9 @@ export default function Hero() {
 
   const stats = [
     { value: '500+', label: 'Projects Completed' },
-    { value: '20+',  label: 'Years Experience' },
+    { value: '29',   label: 'Years in Business' },
+    { value: 'A+',   label: 'BBB Rating' },
     { value: '100%', label: 'Client Satisfaction' },
-    { value: '5★',   label: 'Average Rating' },
   ]
 
   return (
