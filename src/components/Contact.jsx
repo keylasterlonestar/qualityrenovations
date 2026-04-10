@@ -63,6 +63,18 @@ export default function Contact() {
 
   return (
     <section className="contact" id="contact">
+      <div className="contact-map">
+        <iframe
+          title="Quality Renovators Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3484.073!2d-98.8620!3d29.1880!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c8b1b1b1b1b1b%3A0x0!2s707+Miller+St%2C+Natalia%2C+TX+78059!5e0!3m2!1sen!2sus!4v1"
+          width="100%"
+          height="300"
+          style={{ border: 0, display: 'block' }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
       <div className="container">
         <div className="section-heading fade-up" ref={headingRef}>
           <span className="section-label">Get In Touch</span>
@@ -119,6 +131,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )
