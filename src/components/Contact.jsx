@@ -1,17 +1,10 @@
-import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // To receive form submissions by email, sign up free at formspree.io
-    // and replace YOUR_FORM_ID in the action below with your form ID.
-    setSubmitted(true)
-  }
+  const navigate = useNavigate()
+  const headingRef = useScrollAnimation()
+  const gridRef = useScrollAnimation()
 
   const info = [
     {
@@ -56,84 +49,60 @@ export default function Contact() {
         </svg>
       ),
     },
+    {
+      label: 'Facebook',
+      value: 'Follow us on Facebook',
+      href: 'https://www.facebook.com/QualityRenovators/',
+      icon: (
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      ),
+    },
   ]
 
   return (
     <section className="contact" id="contact">
       <div className="container">
-        <div className="section-heading">
+        <div className="section-heading fade-up" ref={headingRef}>
           <span className="section-label">Get In Touch</span>
-          <h2>Request a Free Quote</h2>
-          <p>Fill out the form and we'll get back to you within one business day.</p>
+          <h2>Ready to Start Your Project?</h2>
+          <p>Reach out by phone, email, or fill out our quick quote form — we'll get back to you within one business day.</p>
         </div>
 
-        <div className="contact-grid">
-          <div className="contact-form">
-            {submitted ? (
-              <div className="form-success">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
-                </svg>
-                <h3>Message Sent!</h3>
-                <p>Thank you for reaching out. We'll be in touch within one business day.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="name">Full Name *</label>
-                    <input id="name" name="name" type="text" required placeholder="John Smith" value={form.name} onChange={handleChange} />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input id="phone" name="phone" type="tel" placeholder="(210) 555-0000" value={form.phone} onChange={handleChange} />
-                  </div>
-                </div>
+        <div className="contact-grid fade-up" ref={gridRef}>
 
-                <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
-                  <input id="email" name="email" type="email" required placeholder="you@example.com" value={form.email} onChange={handleChange} />
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="service">Service Needed</label>
-                  <select id="service" name="service" value={form.service} onChange={handleChange}>
-                    <option value="">Select a service…</option>
-                    <option>Kitchen Remodeling</option>
-                    <option>Bathroom Renovation</option>
-                    <option>Home Addition</option>
-                    <option>Flooring Installation</option>
-                    <option>Exterior &amp; Roofing</option>
-                    <option>Interior Painting</option>
-                    <option>Other / Not Sure</option>
-                  </select>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="message">Project Details</label>
-                  <textarea id="message" name="message" placeholder="Tell us about your project…" value={form.message} onChange={handleChange} />
-                </div>
-
-                <button type="submit" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
-                  Send Message
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </button>
-              </form>
-            )}
+          {/* CTA card */}
+          <div className="contact-cta-card">
+            <div className="contact-cta-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h3>Get a Free Quote</h3>
+            <p>
+              Tell us about your project and we'll provide a detailed,
+              no-obligation estimate — completely free.
+            </p>
+            <button className="btn btn-primary" onClick={() => navigate('/quote')}>
+              Request a Free Quote
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <div className="faith-banner" style={{ marginTop: '1.5rem', marginBottom: 0 }}>
+              <span className="faith-quote">"Whatever you do, work at it with all your heart." — Colossians 3:23</span>
+            </div>
           </div>
 
+          {/* Contact info */}
           <div className="contact-info">
-            <div>
-              <h3>Let's Talk About Your Project</h3>
-              <p>
-                We're a faith-based, family-owned team that genuinely cares about the people we work for.
-                Reach out — we'd love to hear about your project and provide a free, no-obligation estimate.
-              </p>
-            </div>
-
+            <h3>Contact Us Directly</h3>
+            <p>We're a faith-based, family-owned team that genuinely cares about the people we work for. Reach out — we'd love to hear about your project.</p>
             <div className="contact-items">
               {info.map(item => (
                 <div className="contact-item" key={item.label}>
@@ -141,7 +110,7 @@ export default function Contact() {
                   <div className="contact-item-text">
                     <strong>{item.label}</strong>
                     {item.href
-                      ? <a href={item.href} target={item.label === 'Address' ? '_blank' : undefined} rel="noreferrer">{item.value}</a>
+                      ? <a href={item.href} target={['Address','Facebook'].includes(item.label) ? '_blank' : undefined} rel="noreferrer">{item.value}</a>
                       : <span>{item.value}</span>
                     }
                   </div>

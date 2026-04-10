@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 export default function About() {
+  const navigate = useNavigate()
   const imgRef = useScrollAnimation()
   const contentRef = useScrollAnimation()
   const features = [
@@ -55,10 +57,7 @@ export default function About() {
               <span className="faith-quote">"Whatever you do, work at it with all your heart." — Colossians 3:23</span>
             </div>
 
-            <button
-              className="btn btn-primary"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <button className="btn btn-primary" onClick={() => navigate('/quote')}>
               Get a Free Estimate
             </button>
           </div>

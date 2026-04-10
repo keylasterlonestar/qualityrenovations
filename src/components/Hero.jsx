@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { useCountUp } from '../hooks/useCountUp'
 
 function StatItem({ value, label }) {
@@ -11,6 +12,7 @@ function StatItem({ value, label }) {
 }
 
 export default function Hero() {
+  const navigate = useNavigate()
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -45,7 +47,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-primary" onClick={() => scrollTo('contact')}>
+            <button className="btn btn-primary" onClick={() => navigate('/quote')}>
               Get a Free Quote
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
