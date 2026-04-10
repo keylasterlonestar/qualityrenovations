@@ -1,4 +1,8 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+
 export default function About() {
+  const imgRef = useScrollAnimation()
+  const contentRef = useScrollAnimation()
   const features = [
     'Faith-based values guiding every decision we make',
     'Family-owned and operated — we treat you like family',
@@ -12,7 +16,7 @@ export default function About() {
     <section className="about" id="about">
       <div className="container">
         <div className="about-grid">
-          <div className="about-image-wrap">
+          <div className="about-image-wrap fade-left" ref={imgRef}>
             <img
               src="/images/IMG_5620.jpg"
               alt="Quality Renovators team at work"
@@ -23,7 +27,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="about-content">
+          <div className="about-content fade-right" ref={contentRef}>
             <span className="section-label">About Us</span>
             <h2>Faith-Based. Family-Owned. Built on Trust.</h2>
             <p>

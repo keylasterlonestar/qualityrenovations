@@ -1,3 +1,5 @@
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+
 const services = [
   {
     title: 'Kitchen Remodeling',
@@ -67,23 +69,32 @@ const services = [
   },
 ]
 
+function ServiceCard({ service, delay }) {
+  const ref = useScrollAnimation()
+  return (
+    <div className={`service-card fade-up delay-${delay}`} ref={ref}>
+      <div className="service-icon">{service.icon}</div>
+      <h3>{service.title}</h3>
+      <p>{service.desc}</p>
+    </div>
+  )
+}
+
 export default function Services() {
+  const headingRef = useScrollAnimation()
+
   return (
     <section className="services" id="services">
       <div className="container">
-        <div className="section-heading">
+        <div className="section-heading fade-up" ref={headingRef}>
           <span className="section-label">What We Do</span>
           <h2>Our Services</h2>
           <p>From small updates to complete renovations, we bring skill and integrity to every project.</p>
         </div>
 
         <div className="services-grid">
-          {services.map(s => (
-            <div className="service-card" key={s.title}>
-              <div className="service-icon">{s.icon}</div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-            </div>
+          {services.map((s, i) => (
+            <ServiceCard key={s.title} service={s} delay={i + 1} />
           ))}
         </div>
       </div>

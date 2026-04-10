@@ -1,3 +1,15 @@
+import { useCountUp } from '../hooks/useCountUp'
+
+function StatItem({ value, label }) {
+  const { ref, count } = useCountUp(value)
+  return (
+    <div className="hero-stat" ref={ref}>
+      <h3>{count || '0'}</h3>
+      <p>{label}</p>
+    </div>
+  )
+}
+
 export default function Hero() {
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -48,10 +60,7 @@ export default function Hero() {
         <div className="hero-stats" style={{ marginTop: 'auto' }}>
           <div className="hero-stats-grid">
             {stats.map(s => (
-              <div className="hero-stat" key={s.label}>
-                <h3>{s.value}</h3>
-                <p>{s.label}</p>
-              </div>
+              <StatItem key={s.label} value={s.value} label={s.label} />
             ))}
           </div>
         </div>
